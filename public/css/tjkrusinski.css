@@ -10,6 +10,13 @@ html {
 	color: #555;
 }
 
+body {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
 ul {
 	list-style: none;
 }
@@ -18,6 +25,11 @@ p {
 	font-size: .9em;
 	font-family: serif;
 	color: #111;
+}
+
+.title, .things, .about {
+	position: relative;
+	z-index: 100;
 }
 
 .left {
@@ -35,29 +47,36 @@ p {
 }
 
 .banner-image {
-	position: fixed;
-	z-index: 100;
-	height: 20%;
-	top: 0;
-	width: 100%;
-}
-
-.banner-image img {
-	top: -120px;
-	right: 0;
-	position: absolute;
-	width: 100%;
+	top: -50%; bottom: 0;
+	left: 0; right: 0;
+	height: 100%;
+	background-image: url(/img/clouds.jpg);
 	transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 }
 
+.banner-image.normal {
+	height: 100%;
+	top: 0; bottom: 0;
+}
+
+.banner-image.normal img {
+	bottom: 0;
+	top: 0;
+	right: 0;
+	position: absolute;
+	width: 100%;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+}
+
 .title {
-	position: relative;
-	z-index: 300;
 	background: #fff;
-	margin: 23% 0 0 0;
+	margin: 15% 0 0 0;
 	padding: 160px 80px 80px 80px;
 }
 
@@ -97,8 +116,9 @@ section {
 .clouds {
 	display: none;
 	position: absolute;
-	z-index: 200;
-	height: 2000px;
+	top: 0;
+	margin: 30% 0 0 0;
+	height: 2300px;
 	background: url(/img/clouds-tessellate.jpg) #fff;
 	background-size: contain;
 	width: 100%;
@@ -109,7 +129,6 @@ section {
 	position: relative;
 	background: #fff;
 	padding: 80px;
-	z-index: 300;
 }
 
 ul.projects a {
@@ -147,8 +166,6 @@ ul.projects li p {
 }
 
 .about {
-	position: relative;
-	z-index: 400;
 	background: #fff;
 	margin: 500px 0 50px;
 	padding: 80px;

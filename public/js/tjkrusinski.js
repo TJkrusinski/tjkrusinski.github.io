@@ -12,8 +12,10 @@ if (navigator.userAgent.match(/Android/i) ||
 };
 
 $(function(){
+	return;
 	
-	var $clouds = $('.clouds');
+	var $clouds = $('.clouds'),
+		$banner = $('.banner-image');
 
 	if (!isMobile) {
 		$(window).on('scroll', function(){
@@ -23,6 +25,19 @@ $(function(){
 			$clouds.css({
 				'transform': 'translateY('+s+'px)'
 			});
+
+			if (s < -600) {
+				$banner.addClass('normal');
+			} else {
+				$banner.removeClass('normal');
+			};
+		});
+
+		$('.clouds').show();
+
+		$banner.css({
+			height: '40%',
+			overflow: 'hidden',
 		});
 	};
 	
