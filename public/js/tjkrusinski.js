@@ -2,19 +2,11 @@
 
 var isMobile;
 
-if (navigator.userAgent.match(/Android/i) ||
-	navigator.userAgent.match(/webOS/i) ||
-	navigator.userAgent.match(/iPhone/i) ||
-	navigator.userAgent.match(/iPod/i) ||
-	navigator.userAgent.match(/iPad/i) ||
-	navigator.userAgent.match(/BlackBerry/)) {
-		isMobile = true;
-};
+if (navigator.userAgent.match(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i)) isMobile = true;
 
 $(function(){
 	
-	var $clouds = $('.clouds'),
-		$banner = $('.banner-image');
+	var $clouds = $('.clouds');
 
 	if (!isMobile) {
 		$('.content-holder').on('scroll', function(){
