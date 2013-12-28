@@ -12,33 +12,22 @@ if (navigator.userAgent.match(/Android/i) ||
 };
 
 $(function(){
-	return;
 	
 	var $clouds = $('.clouds'),
 		$banner = $('.banner-image');
 
 	if (!isMobile) {
-		$(window).on('scroll', function(){
+		$('.content-holder').on('scroll', function(){
 			var s = $(this).scrollTop();
 			if (s < 0) return;
-			s = Math.floor(-s/.975);
+			s = Math.floor(s*.9);
 			$clouds.css({
 				'transform': 'translateY('+s+'px)'
 			});
 
-			if (s < -600) {
-				$banner.addClass('normal');
-			} else {
-				$banner.removeClass('normal');
-			};
 		});
 
 		$('.clouds').show();
-
-		$banner.css({
-			height: '40%',
-			overflow: 'hidden',
-		});
 	};
 	
 });

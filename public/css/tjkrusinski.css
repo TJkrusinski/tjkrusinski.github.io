@@ -15,6 +15,7 @@ body {
 	height: 100%;
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 ul {
@@ -47,10 +48,13 @@ p {
 }
 
 .banner-image {
-	top: -50%; bottom: 0;
+	position: fixed;
+	overflow: scroll;
+	top: 0; bottom: 0;
 	left: 0; right: 0;
 	height: 100%;
 	background-image: url(/img/clouds.jpg);
+	background-size: cover;
 	transform: rotate(180deg);
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
@@ -58,20 +62,17 @@ p {
 }
 
 .banner-image.normal {
-	height: 100%;
-	top: 0; bottom: 0;
-}
-
-.banner-image.normal img {
-	bottom: 0;
-	top: 0;
-	right: 0;
-	position: absolute;
-	width: 100%;
 	transform: rotate(0deg);
 	-webkit-transform: rotate(0deg);
 	-moz-transform: rotate(0deg);
 	-o-transform: rotate(0deg);
+}
+
+.content-holder {
+	position: fixed;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	overflow: scroll;
 }
 
 .title {
@@ -117,15 +118,15 @@ section {
 	display: none;
 	position: absolute;
 	top: 0;
-	margin: 30% 0 0 0;
-	height: 2300px;
-	background: url(/img/clouds-tessellate.jpg) #fff;
-	background-size: contain;
+	bottom: 0;
+	height: 1050px;
+	background: url(/img/dark-clouds.png);
+	background-size: cover;
 	width: 100%;
 }
 
 .things {
-	margin: 500px 0 0 0;
+	margin: 600px 0 0 0;
 	position: relative;
 	background: #fff;
 	padding: 80px;
@@ -167,7 +168,7 @@ ul.projects li p {
 
 .about {
 	background: #fff;
-	margin: 500px 0 50px;
+	margin: 500px 0 0;
 	padding: 80px;
 }
 
