@@ -14,6 +14,12 @@ ul {
 	list-style: none;
 }
 
+p {
+	font-size: .9em;
+	font-family: serif;
+	color: #111;
+}
+
 .left {
 	float: left;
 	width: 50%;
@@ -30,10 +36,10 @@ ul {
 
 .banner-image {
 	position: fixed;
-	z-index: 2;
+	z-index: 100;
+	height: 20%;
 	top: 0;
 	width: 100%;
-	height: 50%;
 }
 
 .banner-image img {
@@ -47,49 +53,59 @@ ul {
 	-o-transform: rotate(180deg);
 }
 
-.content {
+.title {
 	position: relative;
 	z-index: 300;
 	background: #fff;
 	margin: 23% 0 0 0;
 	padding: 160px 80px 80px 80px;
+}
+
+section {
 	-webkit-box-shadow: 0 0 2px 2px rgba(80, 80, 80, 0.1);
 	box-shadow: 0 0 2px 2px rgba(80, 80, 80, 0.1);
 }
 
-.content .right {
+.content-wrap {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.title .right {
 	text-align: right;
 }
 
-.content .right div {
+.title .right div {
 	padding: 5px 0;
 }
 
-.content h1 {
+.title h1 {
 	padding: 0px 0px 30px 0px;
 	font-size: 3em;
 }
 
-.content h3 {
+.title h3 {
 	font-size: 1.5em;
 }
 
-.content a {
+.title a {
 	text-decoration: none;
 	font-size: 1em;
 	color: #444;
 }
 
 .clouds {
-	position: relative;
+	display: none;
+	position: absolute;
 	z-index: 200;
 	height: 2000px;
 	background: url(/img/clouds-tessellate.jpg) #fff;
+	background-size: contain;
 	width: 100%;
 }
 
 .things {
-	margin: -1500px 0 0 0;
+	margin: 500px 0 0 0;
 	position: relative;
 	background: #fff;
 	padding: 80px;
@@ -103,12 +119,31 @@ ul.projects a {
 
 ul.projects .project-img {
 	display: block;
-	width: 30%;
+	width: 70%;
 	margin: 0 auto;
 }
 
 ul.projects li {
-	margin: 30px 0;
+	border-bottom: 1px solid #ddd;
+	padding: 30px 0;
+}
+
+ul.projects li .left {
+	width: 20%;
+}
+
+ul.projects li .right {
+	width: 80%;
+}
+
+ul.projects li h1 {
+	color: #222;
+	font-size: 2em;
+}
+
+ul.projects li p {
+	margin: 15px 0 15px 0;
+	width: 80%;
 }
 
 .about {
@@ -117,4 +152,12 @@ ul.projects li {
 	background: #fff;
 	margin: 500px 0 50px;
 	padding: 80px;
+}
+
+.about p {
+	padding: 30px 0;
+}
+
+.pad-img {
+	padding: .5em 0 0 0;
 }
