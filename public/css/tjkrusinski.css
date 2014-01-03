@@ -10,12 +10,44 @@ html {
 	color: #555;
 }
 
-body {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
+@media all and (min-width: 800px) {
+	body {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.content-holder {
+		position: fixed;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		overflow: scroll;
+	}
+
+	.banner-image {
+		position: fixed;
+		overflow: scroll;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		height: 100%;
+		background-image: url(/img/clouds.jpg);
+		background-size: cover;
+	}
+
+	.banner-image.normal {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+	}
+}
+
+.banner-image {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
 }
 
 ul {
@@ -47,34 +79,6 @@ p {
 	clear: both;
 }
 
-.banner-image {
-	position: fixed;
-	overflow: scroll;
-	top: 0; bottom: 0;
-	left: 0; right: 0;
-	height: 100%;
-	background-image: url(/img/clouds.jpg);
-	background-size: cover;
-	transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	-o-transform: rotate(180deg);
-}
-
-.banner-image.normal {
-	transform: rotate(0deg);
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-}
-
-.content-holder {
-	position: fixed;
-	top: 0; bottom: 0;
-	left: 0; right: 0;
-	overflow: scroll;
-}
-
 .title {
 	background: #fff;
 	margin: 15% 0 0 0;
@@ -84,6 +88,7 @@ p {
 section {
 	-webkit-box-shadow: 0 0 2px 2px rgba(80, 80, 80, 0.1);
 	box-shadow: 0 0 2px 2px rgba(80, 80, 80, 0.1);
+	padding: 80px;
 }
 
 .content-wrap {
@@ -130,7 +135,6 @@ section {
 	margin: 600px 0 0 0;
 	position: relative;
 	background: #fff;
-	padding: 80px;
 }
 
 ul.projects a {
@@ -167,6 +171,10 @@ ul.projects li p {
 	width: 80%;
 }
 
+ul.projects li:last-child {
+	border-bottom: 0;
+}
+
 .about {
 	background: #fff;
 	margin: 500px 0 0;
@@ -179,4 +187,107 @@ ul.projects li p {
 
 .pad-img {
 	padding: .5em 0 0 0;
+}
+
+@media all and (max-width: 800px) {
+	.banner-image {
+		width: 100%;
+		height: 300px;
+		background-image: url(/img/clouds.jpg);
+		background-size: cover;
+	}
+
+	section.title .left, section.title .right {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	section.title .right {
+		margin: 20px 0 0 0;
+	}
+
+	section.things {
+		margin-top: 10px;
+	}
+
+	section.title {
+		margin-top: 0px;
+	}
+
+	section.about {
+		margin-top: 10px;
+	}
+}
+
+@media all and (max-width: 500px) {
+	body {
+		position: relative;
+		overflow: auto;
+		height: auto;
+		width: auto;
+	}
+
+	html body .clouds {
+		display: none !important;
+	}
+
+	section.title .left, section.title .right {
+		text-align: left;
+	}
+
+	section.title {
+		margin-top: 0px;
+		padding: 30px;
+	}
+
+	section.title h1 {
+		font-size: 2em;
+		padding: 0;
+	}
+
+	section.title h3 {
+		font-size: 1.5em;
+	}
+
+	.content-holder {
+		display: inline;
+		overflow: auto;
+		height: auto;
+		width: auto;
+	}
+	
+	ul.projects li .left, ul.projects li .right {
+		float: none;
+		width: 100%;
+	}
+
+	ul.projects li p {
+		margin: 15px 0;
+		width: 100%;
+	}
+
+	ul.projects li .left img {
+		display: block;
+		width: 30%;
+		margin: 40px auto;
+	}
+
+	ul.projects li .right h1 {
+		font-size: 1.3em;
+	}
+
+	ul.projects li .right p {
+		font-size: 1.1em;
+	}
+
+	ul.projects li h1 {
+		text-align: center;
+		width: 100%;
+	}
+
+	section {
+		padding: 10px;
+		text-align: center;
+	}
 }
