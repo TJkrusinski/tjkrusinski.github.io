@@ -1,7 +1,6 @@
 #!/bin/bash
 
 git checkout master
-node index.js &
 curl l:3000/foo > index.html
 git add --all
 git commit -m 'update'
