@@ -31,7 +31,7 @@ html {
 		top: 0; bottom: 0;
 		left: 0; right: 0;
 		height: 100%;
-		background-image: url(/img/clouds.jpg);
+		background-image: url(/public/img/clouds.jpg);
 		background-size: cover;
 	}
 
@@ -126,7 +126,7 @@ section {
 	bottom: 0;
 	margin: 100px 0 0 0;
 	height: 1050px;
-	background: url(/img/dark-clouds.png);
+	background: url(/public/img/dark-clouds.png);
 	background-size: cover;
 	width: 100%;
 }
@@ -189,11 +189,24 @@ ul.projects li:last-child {
 	padding: .5em 0 0 0;
 }
 
+ul.tech {
+	list-style: circle;
+}
+
+ul.tech li {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-family: georgia serif;
+	font-size: .8em;
+	font-weight: bold;
+}
+
 @media all and (max-width: 800px) {
 	.banner-image {
 		width: 100%;
 		height: 300px;
-		background-image: url(/img/clouds.jpg);
+		background-image: url(/public/img/clouds.jpg);
 		background-size: cover;
 	}
 

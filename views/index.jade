@@ -2,7 +2,7 @@ doctype html
 html
 	head
 		title TJ Krusinski
-		link(href="/css/tjkrusinski.css", rel="stylesheet")
+		link(href="public/css/tjkrusinski.css", rel="stylesheet")
 		meta(name="viewport", content="initial-scale=1.0")
 
 	body
@@ -38,60 +38,74 @@ html
 						li
 							a(href="https://shoflo.tv")
 								.left
-									img.project-img(src="/img/sf_logo.png", alt="Shoflo").pad-img
+									img.project-img(src="public/img/sf_logo.png", alt="Shoflo").pad-img
 								.right
 									h1 Shoflo
 									p Shoflo creates realtime
 										| cloud based software for the live events industry.
 										| I co-founded Shoflo in 2012.
 										| Shoflo is made up of a distributed realtime Node.js 
-										| infrastructure that enables a cross device content
+										| infrastructure that enables a cross device content real time
 										| distribution platform for various products.
+									ul.tech
+										li Node.js
+										li Socket.io
+										li RequireJS
+										li MongoDB
+										li Redis
+										li ZeroMQ
+										li HAProxy
+										li AWS EC2, S3, SES
 								.clear
 
 						li
 							a(href="http://streammonkey.com")
 								.left
-									img.project-img(src="/img/sm_logo.png", alt="Stream Monkey")
+									img.project-img(src="public/img/sm_logo.png", alt="Stream Monkey")
 
 								.right
 									h1 Stream Monkey
 
 									p Stream Monkey is a content distribution service for live and
 										| on demand video and audio delivery for the house or worship market
-										| that allows a churches congregation to engage online.
-										| desktops, mobile
-										| devices and set top boxes. 
-
-									p Stream Monkey is a live and on demand video streaming service
-										| targeted at the house of worship market. At Stream Monkey
-										| we cast the 
-
-									p Stream Monkey is a live and on demand video streaming company
-										| targeted at the house of worship market. 
-										| I co-founded Stream Monkey in 2011 and left in 2012.
-										| Stream Monkey has carried on and is thriving, finding
-										| great success in their market.
-
+										| that allows a churches congregation to engage online through
+										| desktops, mobile devices and set top boxes. 
+									ul.tech
+										li Node.js
+										li Wowza Media Server
+										li MySQL
+										li Redis
+										li MongoDB
+										li AWS EC2, S3, ELB
+										li Akamai CDN
 								.clear
 						li
 							a(href="http://realthread.com")
 								.left
-									img.project-img(src="/img/rt_logo.png", alt="Realthread")
+									img.project-img(src="public/img/rt_logo.png", alt="Realthread")
 
 								.right
 									h1 Realthread
 									p Realthread is a water based screen printing shop in Orlando, FL.
-										| Realthread wanted seamless integration between their website
-										| and Salesforce. Realthread can manage their inventory on Salesforce
-										| and see content on their website reflect accordingly. There is 
-										| no CMS for their site.
-							
+										| Realthread wanted tight integration between their website
+										| and Salesforce. We built them a system that allows them to
+										| manage site content, product images, inventory, lead generation
+										| and other customer interaction through their website and a variety of other tools.
+									ul.tech
+										li Node.js
+										li Sass
+										li Browserify
+										li MongoDB
+										li Redis
+										li Salesforce
+										li ImageMagick
+										li AWS Cloudfront, EC2, S3, SES
+										li Heroku
 								.clear
 						li
 							a(href="http://www.meetup.com/orlando-node-js/")
 								.left
-									img.project-img(src="/img/no_logo.jpg", alt="Node Orlando")
+									img.project-img(src="public/img/no_logo.jpg", alt="Node Orlando")
 
 								.right
 									h1 Orlando Node.js Meetup
@@ -99,12 +113,13 @@ html
 										| are lead in a discussion about anything Node.js.
 								.clear
 
-						
-
 			section.about
 				.content-wrap
 					h1 TJ Krusinski
-					p I am a JavaScript developer living in Orlando, FL.
-		
+					p I am a browser and server based JavaScript developer.
+						| I strive to cater to the real time web, creating solutions
+						| that help businesses achieve their technical needs.
+						| 
+	
 		script(src="//code.jquery.com/jquery-1.10.2.min.js")
-		script(src="/js/tjkrusinski.min.js")
+		script(src="public/js/tjkrusinski.min.js")
