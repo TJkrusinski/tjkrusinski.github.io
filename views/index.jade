@@ -2,7 +2,7 @@ doctype html
 html
 	head
 		title TJ Krusinski
-		link(href="public/css/tjkrusinski.css", rel="stylesheet")
+		link(href="public/css/tjkrusinski.min.css", rel="stylesheet")
 		meta(name="viewport", content="initial-scale=1.0")
 
 	body
@@ -15,7 +15,9 @@ html
 				.content-wrap
 					.left
 						h1 TJ Krusinski
-						h3 JavaScript Developer
+						p I am a browser and server based JavaScript developer.
+							| I build for the the real-time web, creating solutions
+							| that help businesses achieve their technical needs.
 					.right
 						div
 							a(href="http://twitter.com/tjkrusinski")
@@ -36,17 +38,17 @@ html
 				.content-wrap
 					ul.projects
 						li
-							a(href="https://shoflo.tv")
+							a(href="https://shoflo.tv", target="_blank")
 								.left
 									img.project-img(src="public/img/sf_logo.png", alt="Shoflo").pad-img
 								.right
 									h1 Shoflo
-									p Shoflo creates realtime
+									p Shoflo creates real-time
 										| cloud based software for the live events industry.
 										| I co-founded Shoflo in 2012.
-										| Shoflo is made up of a distributed realtime Node.js 
-										| infrastructure that enables a cross device content real time
-										| distribution platform for various products.
+										| Shoflo is made up of a distributed Node.js 
+										| infrastructure that enables real-time cross device content
+										| distribution for various web products.
 									ul.tech
 										li Node.js
 										li Socket.io
@@ -59,16 +61,16 @@ html
 								.clear
 
 						li
-							a(href="http://streammonkey.com")
+							a(href="http://streammonkey.com", target="_blank")
 								.left
 									img.project-img(src="public/img/sm_logo.png", alt="Stream Monkey")
 
 								.right
 									h1 Stream Monkey
-
 									p Stream Monkey is a content distribution service for live and
-										| on demand video and audio delivery for the house or worship market
-										| that allows a churches congregation to engage online through
+										| on demand video and audio delivery for the house or worship market.
+										| I co-founded Stream Monkey in 2010 with the goal to allow houses of
+										| worship the simplest path to engage their congregation online through
 										| desktops, mobile devices and set top boxes. 
 									ul.tech
 										li Node.js
@@ -80,7 +82,7 @@ html
 										li Akamai CDN
 								.clear
 						li
-							a(href="http://realthread.com")
+							a(href="http://realthread.com", target="_blank")
 								.left
 									img.project-img(src="public/img/rt_logo.png", alt="Realthread")
 
@@ -90,7 +92,8 @@ html
 										| Real Thread wanted tight integration between their website
 										| and Salesforce. We built them a system that allows them to
 										| manage site content, product images, inventory, lead generation
-										| and other customer interaction through their website and a variety of other tools.
+										| and other customer interaction from their website through Salesforce
+										| and a variety of other tools.
 									ul.tech
 										li Node.js
 										li Sass
@@ -103,7 +106,7 @@ html
 										li Heroku
 								.clear
 						li
-							a(href="http://www.meetup.com/orlando-node-js/")
+							a(href="http://www.meetup.com/orlando-node-js/", target="_blank")
 								.left
 									img.project-img(src="public/img/no_logo.jpg", alt="Node Orlando")
 
@@ -113,13 +116,9 @@ html
 										| are lead in a discussion about anything Node.js.
 								.clear
 
-			section.about
-				.content-wrap
-					h1 TJ Krusinski
-					p I am a browser and server based JavaScript developer.
-						| I strive to cater to the real time web, creating solutions
-						| that help businesses achieve their technical needs.
-						| 
+			section.title.footer
+				.copy
+					span © 2014 TJ Krusinski
 	
 		script(src="//code.jquery.com/jquery-1.10.2.min.js")
 		script(src="public/js/tjkrusinski.min.js")

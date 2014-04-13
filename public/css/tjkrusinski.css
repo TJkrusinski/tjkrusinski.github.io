@@ -82,7 +82,18 @@ p {
 .title {
 	background: #fff;
 	margin: 15% 0 0 0;
-	padding: 160px 80px 80px 80px;
+	padding: 80px;
+}
+
+.footer {
+	padding: 40px 80px;
+}
+
+.footer .copy {
+	text-align: center;
+	font-size: .8em;
+	font-family: serif;
+	margin: 2em 0;
 }
 
 section {
@@ -164,6 +175,10 @@ ul.projects li .right {
 ul.projects li h1 {
 	color: #222;
 	font-size: 2em;
+}
+
+ul.projects li:hover h1 {
+	text-decoration: underline;
 }
 
 ul.projects li p {

@@ -1,12 +1,11 @@
 'use strict';
 
-var isMobile;
-
-if (navigator.userAgent.match(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i)) isMobile = true;
-
 $(function(){
-	
+	var isMobile;
 	var $clouds = $('.clouds');
+
+	if (navigator.userAgent.match(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i))
+		isMobile = true;
 
 	if (!isMobile) {
 		$('.content-holder').on('scroll', function(){
@@ -21,5 +20,4 @@ $(function(){
 
 		$('.clouds').show();
 	};
-	
 });
